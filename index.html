@@ -7,19 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <h1>Find Fake Friends</h1> 
-   <p>Upload Your Instagram Files</p>
-   <div>
-    <label for="followersFile">Followers File: </label>
-    <input type="file" id="followersFile" accept=".html">
-   </div>
-   <div>
-    <label for="followingFile">Following File: </label>
-    <input type="file" id="followingFile" accept=".html">
-   </div>
-   <button id="analyzeBtn">Find Fake Friends</button>
-   <h2>Your Fake Friends</h2>
-   <ul id="fakeFriendsList"></ul>
-   <script>src="script.js"</script>
+  <div class="container">
+    <h1>Find Fake Friends</h1>
+    <p>Upload your Instagram files to find who doesn't follow you back.</p>
+
+<div class="upload-group">
+  <label for="followersFile">Followers File:</label>
+  <input type="file" id="followersFile" accept=".html">
+</div>
+
+<div class="upload-group">
+  <label for="followingFile">Following File:</label>
+  <input type="file" id="followingFile" accept=".html">
+</div>
+
+<button id="clearBtn" class="secondary">Clear Selected Files</button>
+<button id="analyzeBtn">Find Fake Friends</button>
+
+
+    <h2>Your Fake Friends</h2>
+    <ul id="fakeFriendsList"></ul>
+
+    <footer>
+      <p>All processing is done locally in your browser. Your data is never uploaded or stored.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

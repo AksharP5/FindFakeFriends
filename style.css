@@ -1,0 +1,182 @@
+/* Reset and base styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(145deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  color: #262626;
+}
+
+/* Subtle animated gradient */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Card layout */
+.container {
+  background-color: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Smooth fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #262626;
+}
+
+p {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Upload section */
+.upload-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+input[type="file"]:hover {
+  border-color: #999;
+}
+
+/* Gradient pill button */
+button {
+  width: 100%;
+  background: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.92;
+  transform: scale(1.02);
+}
+
+/* Results */
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #444;
+}
+
+ul#fakeFriendsList {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+ul#fakeFriendsList li {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+ul#fakeFriendsList li a {
+  color: #00376b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+ul#fakeFriendsList li a:hover {
+  color: #d62976;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 30px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .container {
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+  
+  button.secondary {
+  background: white;
+  color: #d62976;
+  border: 2px solid #d62976;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button.secondary:hover {
+  background: #fff0f5;
+  transform: none;
+}
+
+}
