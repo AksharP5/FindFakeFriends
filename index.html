@@ -8,10 +8,18 @@
 </head>
 <body>
    <h1>Find Fake Friends</h1> 
-   <div class="upload-section">
-<label>Followers File: <input type="file" id="followers-file" accept=".html"/></label>
-<label>Following File: <input type="file" id="following-file" accept=".html"/></label>
+   <p>Upload Your Instagram Files</p>
+   <div>
+    <label for="followersFile">Followers File: </label>
+    <input type="file" id="followersFile" accept=".html">
    </div>
+   <div>
+    <label for="followingFile">Following File: </label>
+    <input type="file" id="followingFile" accept=".html">
+   </div>
+   <button id="analyzeBtn">Find Fake Friends</button>
+   <h2>Your Fake Friends</h2>
+   <ul id="fakeFriendsList"></ul>
    <script>src="script.js"</script>
 </body>
 </html>
