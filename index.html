@@ -8,11 +8,39 @@
 </head>
 <body>
   <div class="container">
-    <h1>Find Fake Friends</h1>
+    <h1 class="insta-gradient-text">Find Fake Friends</h1>
     <p>Upload your Instagram zip file to see who doesn't follow you back.</p>
+    <form id="uploadForm">
+      <div class="file-upload-container" id="dropZone">
+        <input id="zipFile" type="file" class="file-input" accept="application/zip,.zip">
+        <div class="file-upload-icon">📁</div>
+        <div class="file-upload-text">Drop your Instagram ZIP file here</div>
+        <div class="file-upload-hint">or click to browse files</div>
+        <div class="file-name" id="fileName"></div>
+      </div>
+      <div class="button-row">
+        <button type="button" id="analyzeBtn" class="insta-btn">Find Fake Friends</button>
+        <button type="button" id="resetBtn" class="insta-btn insta-btn-reset">Reset</button>
+      </div>
+      <div id="loadingSpinner" class="loader" aria-label="Loading" style="display:none;"></div>
+    </form>
+    <section id="results" class="results-section" style="display:none;">
+      <nav class="tabs">
+        <button class="tablinks" id="defaultTab" onclick="openTab(event, 'fakeFriendsTab')">Your Fake Friends (<span id="fakeFriendsCount">0</span>)</button>
+        <button class="tablinks" onclick="openTab(event, 'notYourFriendsTab')">Not Your Friends (<span id="notYourFriendsCount">0</span>)</button>
+        <button class="tablinks" onclick="openTab(event, 'trueFriendsTab')">Your True Friends (<span id="trueFriendsCount">0</span>)</button>
+      </nav>
+      <div id="fakeFriendsTab" class="tabcontent">
+        <div id="fakeFriendsList" class="user-card-list"></div>
+      </div>
+      <div id="notYourFriendsTab" class="tabcontent">
+        <div id="notYourFriendsList" class="user-card-list"></div>
+      </div>
+      <div id="trueFriendsTab" class="tabcontent">
+        <div id="trueFriendsList" class="user-card-list"></div>
+      </div>
+    </section>
   </div>
-
   <script src="script.js"></script>
 </body>
-
 </html>
