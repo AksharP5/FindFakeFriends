@@ -459,3 +459,29 @@ body {
   font-size: 1rem;
   text-align: center;
 }
+
+.github-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #C13584;
+  background: #fff;
+  border: 2px solid #C13584;
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  margin-left: 8px;
+  font-size: 1.2rem;
+}
+
+.github-btn:hover {
+  background: #C13584;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(193,53,132,0.15);
+}
+
+.github-btn svg {
+  width: 24px;
+  height: 24px;
+}
