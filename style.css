@@ -481,7 +481,15 @@ body {
   box-shadow: 0 4px 12px rgba(193,53,132,0.15);
 }
 
-.github-btn svg {
-  width: 24px;
-  height: 24px;
+.github-btn i {
+  font-size: 1.5rem;
+  color: #C13584;
+  vertical-align: middle;
+  transition: color 0.2s;
+  display: inline-block;
+  line-height: 1;
+}
+
+.github-btn:hover i {
+  color: #fff;
 }
