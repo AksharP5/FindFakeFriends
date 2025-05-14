@@ -493,3 +493,61 @@ body {
 .github-btn:hover i {
   color: #fff;
 }
+
+.how-to-section {
+  margin: 32px 0 0 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.howto-toggle {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  padding: 8px 18px;
+}
+
+.howto-steps {
+  display: none;
+  background: #f7f0fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(64,93,230,0.08);
+  padding: 18px 18px 12px 28px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.04rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.howto-steps.visible {
+  display: block;
+}
+
+.howto-steps ol {
+  padding-left: 18px;
+}
+
+.howto-steps li {
+  margin-bottom: 22px;
+  line-height: 1.7;
+}
+
+.howto-img {
+  display: block;
+  margin: 12px 0 0 0;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(64,93,230,0.10);
+  border: 1.5px solid #e6e6e6;
+}
+
+@media (max-width: 600px) {
+  .howto-steps {
+    padding: 10px 4vw 8px 4vw;
+    font-size: 0.98rem;
+  }
+  .howto-img {
+    max-width: 98vw;
+  }
+}
