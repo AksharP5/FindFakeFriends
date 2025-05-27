@@ -5,7 +5,7 @@
 - Who follows you but you don't follow back
 - Your true mutuals
 
-All analysis is done **entirely in your browser**—your data never leaves your device.
+All analysis is done **entirely in your browser**, your data never leaves your device.
 
 ---
 
